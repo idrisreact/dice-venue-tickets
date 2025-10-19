@@ -11,7 +11,7 @@ interface UseEventListOptions {
 }
 
 const DEFAULT_PAGE_SIZE = 12;
-const DEFAULT_STALE_TIME = 1000 * 60 * 5;
+const DEFAULT_STALE_TIME = 1000 * 30;
 
 export function useEventList({
   venue,
@@ -33,7 +33,8 @@ export function useEventList({
     },
     enabled: !!venue,
     initialPageParam: 1,
-    refetchOnWindowFocus: false,
+    refetchOnWindowFocus: true,
+    refetchInterval: 1000 * 60,
     staleTime,
   });
 
