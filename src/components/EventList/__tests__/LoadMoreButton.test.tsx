@@ -100,6 +100,6 @@ describe('LoadMoreButton', () => {
     render(<LoadMoreButton onLoadMore={onLoadMore} isLoading={false} hasMore={true} />);
 
     const button = screen.getByRole('button', { name: /load more events/i });
-    expect(button).toHaveClass('px-8', 'py-3', 'bg-blue-600', 'text-white', 'rounded-lg');
+    expect(button).toHaveClass('px-8', 'py-3', 'bg-[#3C74FF]', 'text-white', 'font-medium');
   });
 });
